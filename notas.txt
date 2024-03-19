@@ -1,0 +1,7 @@
+numeros colocados pelo o usuario nao pode ser colocado em uma array
+para determinar o numero em decimal, usar apenas uma função matematica
+
+user story: 
+pode inserir ate 8 dig em um campo de entrada 
+se o input for diferente de 0 ou 1 avisar o user
+mostrar para o user o numero convertido par decimal
