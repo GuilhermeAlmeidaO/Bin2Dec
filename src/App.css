@@ -6,148 +6,160 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
+.hidden{
+    display: none;
+}
+
 p,
 h2 {
     margin: 0;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.container{
     background-color: #F6F4F4;
+    height: auto;
     width: 70vw;
-    height: 90vh;
-    padding: 20px;
+    padding: 50px;
 }
 
-.container div {
-    width: 90%;
+.container .presentation, .container .inputUser, .container .outputUser, .container .buttonsAction{
+    width: 100%;
 }
 
-.presentation {
+.presentation{
     text-align: center;
-    margin-bottom: 10px;
 }
 
-.title {
+.description{
+    color: #585858;
+    font-size: .8rem;
+}
+
+.title{
     font-size: 2.5rem;
 }
 
-.description {
-    color: #585858;
-    font-size: 0.8rem;
-}
-
-.inputUser {
+.inputUser{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    /* Centraliza horizontalmente */
-    justify-content: center;
-    /* Centraliza verticalmente */
-    border-radius: 5px;
-    width: 50%;
-    height: 25%;
-    padding: 0 5px;
+    flex-direction: column;
+    margin-top: 25px;
 }
 
-.inputUser p {
+.inputUser__title{
+    width: 30vw;
+    text-align: left;
     font-size: 1.6rem;
     margin-bottom: 5px;
 }
 
-.inputUser .inputUser_tag {
+.inputUser_tag{
+    width: 30vw;
+    height: 10vh;
+    border: 2px solid #747474;
+    border-radius: 5px;
+    background-color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 2px solid #747474;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 50%;
-    height: 70%;
-    padding: 0 5px;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
+.inputContent{
+    margin-left: 15px;
 }
 
-.buttons button {
-    border: 1px solid black;
+.buttons button{
     margin: 5px;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #707070;
+    color: #fff;
 }
 
 .buttons button:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #585858e6;
 }
 
-.outputUser {
-    height: 50%;
+.outputUser{
     display: flex;
+    align-items: center;
     flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
+    margin-top: 25px;
 }
 
-.outputUser p {
+.outputUser__title{
+    width: 30vw;
+    text-align: left;
     font-size: 1.6rem;
-    text-align: center;
+    margin-bottom: 5px;
 }
 
-.outputUser div {
+.outputUser_tag{
+    width: 30vw;
+    height: 10vh;
     border: 2px solid #747474;
-    background-color: #fff;
     border-radius: 5px;
-    width: 50%;
-    height: 70%;
-    padding: 0 0 0 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.outputUser_tag_content{
+    margin-left: 15px;
 }
 
 .buttonsAction{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
 .buttonsAction button{
+    margin: 5px;
+    border: 0;
     cursor: pointer;
-}
-
-#convert{
     color: #fff;
-    background-color: #9F0000;
-    padding: 5px 10px;
-    border: 0;
-    border-radius: 5px;
     font-size: 1rem;
-}
-
-#convert:hover{
-    background-color: rgba(159, 0, 0, 0.9)
-}
-
-#clear{
-    color: #fff;
-    background-color: rgba(88, 88, 88);
     padding: 5px 10px;
-    border: 0;
     border-radius: 5px;
-    font-size: 1rem;
 }
 
-#clear:hover{
-    background-color: rgba(88, 88, 88, 0.9);
+.buttonsAction button#convert{
+    background-color: #9f0000;
+}
 
+#convert:hover {
+    background-color: #9f0000e6
+}
+
+.buttonsAction button#clear{
+    background-color: #585858;
+}
+
+#clear:hover {
+    background-color: #585858e6
 }
 
 @media (max-width: 425px) {
-    .container{
-        min-height: 100vh;
+    .outputUser_tag, .inputUser_tag{
+        height: 20vh;
+        width: 50vw;
+    }
+
+    .inputUser__title, .outputUser__title  {
+        width: 40vh;
+    }
+}
+
+@media (max-width: 375px) {
+    .inputUser__title, .outputUser__title  {
+        width: 35vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .inputUser__title, .outputUser__title  {
+        width: 30vh;
     }
 }
