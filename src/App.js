@@ -37,7 +37,7 @@ function App() {
   }
 
   function limparOutputUser() {
-    var div = document.getElementById("outputUser_tag")
+    var div = document.getElementById("outputUser_tag_content")
     div.innerHTML = ''
   }
 
